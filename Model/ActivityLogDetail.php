@@ -27,6 +27,6 @@ class ActivityLogDetail extends AbstractModel
      */
     public function _construct()
     {
-        $this->_init(KiwiCommerce\AdminActivity\Model\ResourceModel\ActivityLogDetail::class);
+        $this->_init(\KiwiCommerce\AdminActivity\Model\ResourceModel\ActivityLogDetail::class);
     }
 }

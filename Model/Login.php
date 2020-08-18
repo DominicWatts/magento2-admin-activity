@@ -27,6 +27,6 @@ class Login extends AbstractModel
      */
     public function _construct()
     {
-        $this->_init(KiwiCommerce\AdminActivity\Model\ResourceModel\Login::class);
+        $this->_init(\KiwiCommerce\AdminActivity\Model\ResourceModel\Login::class);
     }
 }

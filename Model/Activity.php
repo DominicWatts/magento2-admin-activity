@@ -27,6 +27,6 @@ class Activity extends AbstractModel
      */
     public function _construct()
     {
-        $this->_init(KiwiCommerce\AdminActivity\Model\ResourceModel\Activity::class);
+        $this->_init(\KiwiCommerce\AdminActivity\Model\ResourceModel\Activity::class);
     }
 }

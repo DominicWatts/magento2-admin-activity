@@ -23,8 +23,8 @@ class Collection extends AbstractCollection
     public function _construct()
     {
         $this->_init(
-            KiwiCommerce\AdminActivity\Model\ActivityLog::class,
-            KiwiCommerce\AdminActivity\Model\ResourceModel\ActivityLog::class
+            \KiwiCommerce\AdminActivity\Model\ActivityLog::class,
+            \KiwiCommerce\AdminActivity\Model\ResourceModel\ActivityLog::class
         );
     }
 }
