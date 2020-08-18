@@ -94,7 +94,7 @@ class LoginRepository implements \KiwiCommerce\AdminActivity\Api\LoginRepository
         $login = $this->loginFactory->create();
 
         $user = $this->getUser();
-        if($user != null && $user instanceof \Magento\User\Model\User) {
+        if ($user != null && $user instanceof \Magento\User\Model\User) {
             $login->setUsername($user->getUsername());
             $login->setName(ucwords($user->getName()));
         }

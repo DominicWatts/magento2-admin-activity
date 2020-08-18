@@ -949,50 +949,45 @@ class Browser extends \Magento\Framework\App\Helper\AbstractHelper
                 $aresult = explode(' ', stristr(str_replace(';', '; ', $this->_agent), 'MSN'));
                 if (isset($aresult[1])) {
                     $this->setBrowser(self::BROWSER_MSN);
-                    $this->setVersion(str_replace(array('(', ')', ';'), '', $aresult[1]));
+                    $this->setVersion(str_replace(['(', ')', ';'], '', $aresult[1]));
                     return true;
                 }
             }
             $aresult = explode(' ', stristr(str_replace(';', '; ', $this->_agent), 'msie'));
             if (isset($aresult[1])) {
                 $this->setBrowser(self::BROWSER_IE);
-                $this->setVersion(str_replace(array('(', ')', ';'), '', $aresult[1]));
-                if(preg_match('#trident/([0-9\.]+);#i', $this->_agent, $aresult)){
-                    if($aresult[1] == '3.1'){
+                $this->setVersion(str_replace(['(', ')', ';'], '', $aresult[1]));
+                if (preg_match('#trident/([0-9\.]+);#i', $this->_agent, $aresult)) {
+                    if ($aresult[1] == '3.1') {
                         $this->setVersion('7.0');
-                    }
-                    else if($aresult[1] == '4.0'){
+                    } elseif ($aresult[1] == '4.0') {
                         $this->setVersion('8.0');
-                    }
-                    else if($aresult[1] == '5.0'){
+                    } elseif ($aresult[1] == '5.0') {
                         $this->setVersion('9.0');
-                    }
-                    else if($aresult[1] == '6.0'){
+                    } elseif ($aresult[1] == '6.0') {
                         $this->setVersion('10.0');
-                    }
-                    else if($aresult[1] == '7.0'){
+                    } elseif ($aresult[1] == '7.0') {
                         $this->setVersion('11.0');
-                    }
-                    else if($aresult[1] == '8.0'){
+                    } elseif ($aresult[1] == '8.0') {
                         $this->setVersion('11.0');
                     }
                 }
-                if(stripos($this->_agent, 'IEMobile') !== false) {
+                if (stripos($this->_agent, 'IEMobile') !== false) {
                     $this->setBrowser(self::BROWSER_POCKET_IE);
                     $this->setMobile(true);
                 }
                 return true;
             }
         } // Test for versions > IE 10
-        else if (stripos($this->_agent, 'trident') !== false) {
+        elseif (stripos($this->_agent, 'trident') !== false) {
             $this->setBrowser(self::BROWSER_IE);
             $result = explode('rv:', $this->_agent);
             if (isset($result[1])) {
                 $this->setVersion(preg_replace('/[^0-9.]+/', '', $result[1]));
-                $this->_agent = str_replace(array("Mozilla", "Gecko"), "MSIE", $this->_agent);
+                $this->_agent = str_replace(["Mozilla", "Gecko"], "MSIE", $this->_agent);
             }
         } // Test for Pocket IE
-        else if (stripos($this->_agent, 'mspie') !== false || stripos($this->_agent, 'pocket') !== false) {
+        elseif (stripos($this->_agent, 'mspie') !== false || stripos($this->_agent, 'pocket') !== false) {
             $aresult = explode(' ', stristr($this->_agent, 'mspie'));
             if (isset($aresult[1])) {
                 $this->setPlatform(self::PLATFORM_WINDOWS_CE);
@@ -1036,11 +1031,11 @@ class Browser extends \Magento\Framework\App\Helper\AbstractHelper
             $this->_browser_name = self::BROWSER_OPERA_MINI;
             $this->setMobile(true);
             return true;
-        } else if (stripos($this->_agent, 'opera') !== false) {
+        } elseif (stripos($this->_agent, 'opera') !== false) {
             $resultant = stristr($this->_agent, 'opera');
             if (preg_match('/Version\/(1*.*)$/', $resultant, $matches)) {
                 $this->setVersion($matches[1]);
-            } else if (preg_match('/\//', $resultant)) {
+            } elseif (preg_match('/\//', $resultant)) {
                 $aresult = explode('/', str_replace("(", " ", $resultant));
                 if (isset($aresult[1])) {
                     $aversion = explode(' ', $aresult[1]);
@@ -1055,7 +1050,7 @@ class Browser extends \Magento\Framework\App\Helper\AbstractHelper
             }
             $this->_browser_name = self::BROWSER_OPERA;
             return true;
-        } else if (stripos($this->_agent, 'OPR') !== false) {
+        } elseif (stripos($this->_agent, 'OPR') !== false) {
             $resultant = stristr($this->_agent, 'OPR');
             if (preg_match('/\//', $resultant)) {
                 $aresult = explode('/', str_replace("(", " ", $resultant));
@@ -1128,7 +1123,7 @@ class Browser extends \Magento\Framework\App\Helper\AbstractHelper
             $aresult = explode('/', stristr($this->_agent, 'NetPositive'));
             if (isset($aresult[1])) {
                 $aversion = explode(' ', $aresult[1]);
-                $this->setVersion(str_replace(array('(', ')', ';'), '', $aversion[0]));
+                $this->setVersion(str_replace(['(', ')', ';'], '', $aversion[0]));
                 $this->setBrowser(self::BROWSER_NETPOSITIVE);
                 return true;
             }
@@ -1250,7 +1245,7 @@ class Browser extends \Magento\Framework\App\Helper\AbstractHelper
             $this->setVersion($matches[1]);
             $this->setBrowser(self::BROWSER_NETSCAPE_NAVIGATOR);
             return true;
-        } else if (stripos($this->_agent, 'Firefox') === false && preg_match('/Netscape6?\/([^ ]*)/i', $this->_agent, $matches)) {
+        } elseif (stripos($this->_agent, 'Firefox') === false && preg_match('/Netscape6?\/([^ ]*)/i', $this->_agent, $matches)) {
             $this->setVersion($matches[1]);
             $this->setBrowser(self::BROWSER_NETSCAPE_NAVIGATOR);
             return true;
@@ -1324,7 +1319,7 @@ class Browser extends \Magento\Framework\App\Helper\AbstractHelper
                     }
                 }
                 return true;
-            } else if (preg_match("/Firefox$/i", $this->_agent, $matches)) {
+            } elseif (preg_match("/Firefox$/i", $this->_agent, $matches)) {
                 $this->setVersion("");
                 $this->setBrowser(self::BROWSER_FIREFOX);
                 return true;
@@ -1363,12 +1358,12 @@ class Browser extends \Magento\Framework\App\Helper\AbstractHelper
             $this->setVersion(str_replace('rv:', '', $aversion[0]));
             $this->setBrowser(self::BROWSER_MOZILLA);
             return true;
-        } else if (stripos($this->_agent, 'mozilla') !== false && preg_match('/rv:[0-9]\.[0-9]/i', $this->_agent) && stripos($this->_agent, 'netscape') === false) {
+        } elseif (stripos($this->_agent, 'mozilla') !== false && preg_match('/rv:[0-9]\.[0-9]/i', $this->_agent) && stripos($this->_agent, 'netscape') === false) {
             $aversion = explode('', stristr($this->_agent, 'rv:'));
             $this->setVersion(str_replace('rv:', '', $aversion[0]));
             $this->setBrowser(self::BROWSER_MOZILLA);
             return true;
-        } else if (stripos($this->_agent, 'mozilla') !== false && preg_match('/mozilla\/([^ ]*)/i', $this->_agent, $matches) && stripos($this->_agent, 'netscape') === false) {
+        } elseif (stripos($this->_agent, 'mozilla') !== false && preg_match('/mozilla\/([^ ]*)/i', $this->_agent, $matches) && stripos($this->_agent, 'netscape') === false) {
             $this->setVersion($matches[1]);
             $this->setBrowser(self::BROWSER_MOZILLA);
             return true;
@@ -1728,11 +1723,11 @@ class Browser extends \Magento\Framework\App\Helper\AbstractHelper
     {
         if (stripos($this->_agent, 'windows') !== false) {
             $this->_platform = self::PLATFORM_WINDOWS;
-        } else if (stripos($this->_agent, 'iPad') !== false) {
+        } elseif (stripos($this->_agent, 'iPad') !== false) {
             $this->_platform = self::PLATFORM_IPAD;
-        } else if (stripos($this->_agent, 'iPod') !== false) {
+        } elseif (stripos($this->_agent, 'iPod') !== false) {
             $this->_platform = self::PLATFORM_IPOD;
-        } else if (stripos($this->_agent, 'iPhone') !== false) {
+        } elseif (stripos($this->_agent, 'iPhone') !== false) {
             $this->_platform = self::PLATFORM_IPHONE;
         } elseif (stripos($this->_agent, 'mac') !== false) {
             $this->_platform = self::PLATFORM_APPLE;
@@ -1740,13 +1735,13 @@ class Browser extends \Magento\Framework\App\Helper\AbstractHelper
             $this->_platform = self::PLATFORM_ANDROID;
         } elseif (stripos($this->_agent, 'Silk') !== false) {
             $this->_platform = self::PLATFORM_FIRE_OS;
-        } elseif (stripos($this->_agent, 'linux') !== false && stripos($this->_agent, 'SMART-TV') !== false ) {
+        } elseif (stripos($this->_agent, 'linux') !== false && stripos($this->_agent, 'SMART-TV') !== false) {
             $this->_platform = self::PLATFORM_LINUX .'/'.self::PLATFORM_SMART_TV;
         } elseif (stripos($this->_agent, 'linux') !== false) {
             $this->_platform = self::PLATFORM_LINUX;
-        } else if (stripos($this->_agent, 'Nokia') !== false) {
+        } elseif (stripos($this->_agent, 'Nokia') !== false) {
             $this->_platform = self::PLATFORM_NOKIA;
-        } else if (stripos($this->_agent, 'BlackBerry') !== false) {
+        } elseif (stripos($this->_agent, 'BlackBerry') !== false) {
             $this->_platform = self::PLATFORM_BLACKBERRY;
         } elseif (stripos($this->_agent, 'FreeBSD') !== false) {
             $this->_platform = self::PLATFORM_FREEBSD;
@@ -1783,6 +1778,5 @@ class Browser extends \Magento\Framework\App\Helper\AbstractHelper
         } elseif (stripos($this->_agent, 'Iframely') !== false) {
             $this->_platform = self::PLATFORM_I_FRAME;
         }
-
     }
 }

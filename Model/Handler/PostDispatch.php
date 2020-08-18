@@ -71,7 +71,7 @@ class PostDispatch
     {
         $logData = [];
         $status = $this->request->getParam('status', '');
-        if($status != '') {
+        if ($status != '') {
             $logData['status'] = [
                 'old_value' => $model->getStatus(),
                 'new_value' => $status
@@ -79,7 +79,7 @@ class PostDispatch
         }
 
         $attributes = $this->request->getParam('attributes', []);
-        if(!empty($attributes)) {
+        if (!empty($attributes)) {
             foreach ($attributes as $attribute => $value) {
                 $logData[$attribute] = [
                     'old_value' => $model->getData($attribute),
@@ -89,7 +89,7 @@ class PostDispatch
         }
 
         $inventories = $this->request->getParam('inventory', []);
-        if(!empty($inventories)) {
+        if (!empty($inventories)) {
             foreach ($inventories as $field => $value) {
                 $logData[$field] = [
                     'old_value' => $model->getData($field),
@@ -128,10 +128,10 @@ class PostDispatch
         $activity->setIsRevertable(1);
 
         $selected = $this->request->getParam('selected');
-        if(empty($selected)) {
+        if (empty($selected)) {
             $selected = $this->session->getProductIds();
         }
-        if(!empty($selected)) {
+        if (!empty($selected)) {
             foreach ($selected as $id) {
 
                 $model = $this->productRepository->getById($id);

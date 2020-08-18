@@ -64,7 +64,7 @@ class Config
     {
         $actions = [];
         foreach ($this->_xmlConfig as $module => $config) {
-            if(isset($config['actions'])) {
+            if (isset($config['actions'])) {
                 $actions = array_merge($actions, array_keys($config['actions']));
             }
         }

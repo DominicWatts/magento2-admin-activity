@@ -98,7 +98,8 @@ class ItemColumn extends Column
         $length = 30;
         $itemName = $this->filterManager->truncate(
             $this->getLabel(),
-            ['length' => $length, 'etc' => '...', 'remainder' => '', 'breakWords' => false]);
+            ['length' => $length, 'etc' => '...', 'remainder' => '', 'breakWords' => false]
+        );
         return '<a ' . $this->getLinkAttributes() . ' >' . $this->escapeHtml($itemName) . '</a></li>';
     }
 

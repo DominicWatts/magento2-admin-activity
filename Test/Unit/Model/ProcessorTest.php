@@ -162,6 +162,5 @@ class ProcessorTest extends \PHPUnit\Framework\TestCase
             ->method('getEventByAction')
             ->with('catalog_product_save')
             ->willReturn($this->eventConfig);
-
     }
 }
