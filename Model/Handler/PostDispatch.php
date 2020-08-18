@@ -13,10 +13,6 @@
  */
 namespace KiwiCommerce\AdminActivity\Model\Handler;
 
-/**
- * Class PostDispatch
- * @package KiwiCommerce\AdminActivity\Model\Handler
- */
 class PostDispatch
 {
     /**

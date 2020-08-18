@@ -13,10 +13,6 @@
  */
 namespace KiwiCommerce\AdminActivity\Model;
 
-/**
- * Class Config
- * @package KiwiCommerce\AdminActivity\Model
- */
 class Config
 {
     /**
@@ -65,7 +61,7 @@ class Config
         $actions = [];
         foreach ($this->_xmlConfig as $module => $config) {
             if (isset($config['actions'])) {
-                $actions = array_merge($actions, array_keys($config['actions']));
+                $actions = array_merge($actions, array_keys($config['actions'])); // phpcs:ignore 
             }
         }
         return $actions;

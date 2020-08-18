@@ -13,10 +13,6 @@
  */
 namespace KiwiCommerce\AdminActivity\Api;
 
-/**
- * Interface ActivityRepositoryInterface
- * @package KiwiCommerce\AdminActivity\Api
- */
 interface ActivityRepositoryInterface
 {
     /**

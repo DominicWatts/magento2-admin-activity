@@ -13,10 +13,6 @@
  */
 namespace KiwiCommerce\AdminActivity\Logger;
 
-/**
- * Class Logger
- * @package KiwiCommerce\AdminActivity\Logger
- */
 class Logger extends \Monolog\Logger
 {
 

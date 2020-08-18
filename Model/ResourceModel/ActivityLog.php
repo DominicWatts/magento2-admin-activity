@@ -15,10 +15,6 @@ namespace KiwiCommerce\AdminActivity\Model\ResourceModel;
 
 use \Magento\Framework\Model\ResourceModel\Db\AbstractDb;
 
-/**
- * Class ActivityLog
- * @package KiwiCommerce\AdminActivity\Model\ResourceModel
- */
 class ActivityLog extends AbstractDb
 {
 

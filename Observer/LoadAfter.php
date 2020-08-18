@@ -15,10 +15,6 @@ namespace KiwiCommerce\AdminActivity\Observer;
 
 use Magento\Framework\Event\ObserverInterface;
 
-/**
- * Class LoadAfter
- * @package KiwiCommerce\AdminActivity\Observer
- */
 class LoadAfter implements ObserverInterface
 {
     /**

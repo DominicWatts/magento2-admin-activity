@@ -17,10 +17,6 @@ namespace KiwiCommerce\AdminActivity\Block\Adminhtml\System\Config\Fieldset;
 use \Magento\Backend\Block\Template;
 use \Magento\Framework\Data\Form\Element\Renderer\RendererInterface;
 
-/**
- * Class Hint
- * @package KiwiCommerce\AdminActivity\Block\Adminhtml\System\Config\Fieldset
- */
 class Hint extends Template implements RendererInterface
 {
     /**

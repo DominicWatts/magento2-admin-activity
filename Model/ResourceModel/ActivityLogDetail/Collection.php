@@ -15,10 +15,6 @@ namespace KiwiCommerce\AdminActivity\Model\ResourceModel\ActivityLogDetail;
 
 use \Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection;
 
-/**
- * Class Collection
- * @package KiwiCommerce\AdminActivity\Model\ResourceModel\ActivityLogDetail
- */
 class Collection extends AbstractCollection
 {
     /**
@@ -28,8 +24,8 @@ class Collection extends AbstractCollection
     public function _construct()
     {
         $this->_init(
-            'KiwiCommerce\AdminActivity\Model\ActivityLogDetail',
-            'KiwiCommerce\AdminActivity\Model\ResourceModel\ActivityLogDetail'
+            KiwiCommerce\AdminActivity\Model\ActivityLogDetail::class,
+            KiwiCommerce\AdminActivity\Model\ResourceModel\ActivityLogDetail::class
         );
     }
 }

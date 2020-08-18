@@ -13,10 +13,6 @@
  */
 namespace KiwiCommerce\AdminActivity\Test\Unit\Block\Adminhtml;
 
-/**
- * Class SelectorTest
- * @package KiwiCommerce\AdminActivity\Test\Unit\Block\Adminhtml
- */
 class SelectorTest extends \PHPUnit\Framework\TestCase
 {
     public $urlBuiler;

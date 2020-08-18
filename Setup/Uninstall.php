@@ -19,10 +19,6 @@ use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\App\Config\Storage\Writer;
 use KiwiCommerce\AdminActivity\Helper\Data as ActivityHelper;
 
-/**
- * Class Uninstall
- * @package KiwiCommerce\AdminActivity\Setup
- */
 class Uninstall implements UninstallInterface
 {
     /**

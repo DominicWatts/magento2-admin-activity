@@ -15,10 +15,6 @@ namespace KiwiCommerce\AdminActivity\Model;
 
 use \Magento\Framework\Model\AbstractModel;
 
-/**
- * Class Activity
- * @package KiwiCommerce\Activity\Model
- */
 class ActivityLog extends AbstractModel
 {
     /**
@@ -32,6 +28,6 @@ class ActivityLog extends AbstractModel
      */
     public function _construct()
     {
-        $this->_init('KiwiCommerce\AdminActivity\Model\ResourceModel\ActivityLog');
+        $this->_init(KiwiCommerce\AdminActivity\Model\ResourceModel\ActivityLog::class);
     }
 }

@@ -16,10 +16,6 @@ namespace KiwiCommerce\AdminActivity\Controller\Adminhtml\Activity;
 use Magento\Backend\App\Action\Context;
 use Magento\Backend\App\Action;
 
-/**
- * Class Revert
- * @package KiwiCommerce\AdminActivity\Controller\Adminhtml\Activity
- */
 class Revert extends Action
 {
     /**

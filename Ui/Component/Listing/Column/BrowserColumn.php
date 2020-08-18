@@ -15,10 +15,6 @@ namespace KiwiCommerce\AdminActivity\Ui\Component\Listing\Column;
 
 use Magento\Ui\Component\Listing\Columns\Column;
 
-/**
- * Class BrowserColumn
- * @package KiwiCommerce\AdminActivity\Ui\Component\Listing\Column
- */
 class BrowserColumn extends Column
 {
     /**

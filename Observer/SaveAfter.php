@@ -16,10 +16,6 @@ namespace KiwiCommerce\AdminActivity\Observer;
 use Magento\Framework\Event\ObserverInterface;
 use \KiwiCommerce\AdminActivity\Helper\Data as Helper;
 
-/**
- * Class SaveAfter
- * @package KiwiCommerce\AdminActivity\Observer
- */
 class SaveAfter implements ObserverInterface
 {
     /**

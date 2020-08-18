@@ -16,10 +16,6 @@ namespace KiwiCommerce\AdminActivity\Controller\Adminhtml\Activity;
 use Magento\Backend\App\Action\Context;
 use Magento\Backend\App\Action;
 
-/**
- * Class Log
- * @package KiwiCommerce\AdminActivity\Controller\Adminhtml\Activity
- */
 class Log extends Action
 {
     /**

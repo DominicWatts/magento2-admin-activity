@@ -17,10 +17,6 @@ use Psr\Log\LoggerInterface;
 use KiwiCommerce\AdminActivity\Helper\Data as Helper;
 use KiwiCommerce\AdminActivity\Api\ActivityRepositoryInterface;
 
-/**
- * Class ClearLog
- * @package KiwiCommerce\AdminActivity\Cron
- */
 class ClearLog
 {
     /**

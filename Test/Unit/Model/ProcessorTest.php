@@ -13,10 +13,8 @@
  */
 namespace KiwiCommerce\AdminActivity\Test\Unit\Model;
 
-/**
- * Class ProcessorTest
- * @package KiwiCommerce\AdminActivity\Test\Unit\Model
- */
+// phpcs:disable Generic.Files.LineLength
+
 class ProcessorTest extends \PHPUnit\Framework\TestCase
 {
     public $configMock;

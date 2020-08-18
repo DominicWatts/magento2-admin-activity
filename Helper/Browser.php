@@ -13,10 +13,8 @@
  */
 namespace KiwiCommerce\AdminActivity\Helper;
 
-/**
- * Class Browser
- * @package KiwiCommerce\AdminActivity\Helper
- */
+// phpcs:disable Generic.Files.LineLength
+
 class Browser extends \Magento\Framework\App\Helper\AbstractHelper
 {
     /**
@@ -187,7 +185,7 @@ class Browser extends \Magento\Framework\App\Helper\AbstractHelper
      */
     public function reset()
     {
-        $this->_agent = isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : "";
+        $this->_agent = isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : "";  // phpcs:ignore 
         $this->_browser_name = self::BROWSER_UNKNOWN;
         $this->_version = self::VERSION_UNKNOWN;
         $this->_platform = self::PLATFORM_UNKNOWN;
@@ -205,7 +203,7 @@ class Browser extends \Magento\Framework\App\Helper\AbstractHelper
      * @param string $browserName
      * @return bool True if the browser is the specified browser
      */
-    function isBrowser($browserName)
+    public function isBrowser($browserName)
     {
         return (0 == strcasecmp($this->_browser_name, trim($browserName)));
     }
@@ -933,8 +931,8 @@ class Browser extends \Magento\Framework\App\Helper\AbstractHelper
             $this->setBrowser(self::BROWSER_IE);
             $this->setVersion('11.0');
             return true;
-        } // Test for v1 - v1.5 IE
-        elseif (stripos($this->_agent, 'microsoft internet explorer') !== false) {
+        } elseif (stripos($this->_agent, 'microsoft internet explorer') !== false) {
+            // Test for v1 - v1.5 IE
             $this->setBrowser(self::BROWSER_IE);
             $this->setVersion('1.0');
             $aresult = stristr($this->_agent, '/');
@@ -942,8 +940,8 @@ class Browser extends \Magento\Framework\App\Helper\AbstractHelper
                 $this->setVersion('1.5');
             }
             return true;
-        } // Test for versions > 1.5
-        elseif (stripos($this->_agent, 'msie') !== false && stripos($this->_agent, 'opera') === false) {
+        } elseif (stripos($this->_agent, 'msie') !== false && stripos($this->_agent, 'opera') === false) {
+            // Test for versions > 1.5
             // See if the browser is the odd MSN Explorer
             if (stripos($this->_agent, 'msnb') !== false) {
                 $aresult = explode(' ', stristr(str_replace(';', '; ', $this->_agent), 'MSN'));
@@ -978,16 +976,16 @@ class Browser extends \Magento\Framework\App\Helper\AbstractHelper
                 }
                 return true;
             }
-        } // Test for versions > IE 10
-        elseif (stripos($this->_agent, 'trident') !== false) {
+        } elseif (stripos($this->_agent, 'trident') !== false) {
+            // Test for versions > IE 10
             $this->setBrowser(self::BROWSER_IE);
             $result = explode('rv:', $this->_agent);
             if (isset($result[1])) {
                 $this->setVersion(preg_replace('/[^0-9.]+/', '', $result[1]));
                 $this->_agent = str_replace(["Mozilla", "Gecko"], "MSIE", $this->_agent);
             }
-        } // Test for Pocket IE
-        elseif (stripos($this->_agent, 'mspie') !== false || stripos($this->_agent, 'pocket') !== false) {
+        } elseif (stripos($this->_agent, 'mspie') !== false || stripos($this->_agent, 'pocket') !== false) {
+            // Test for Pocket IE
             $aresult = explode(' ', stristr($this->_agent, 'mspie'));
             if (isset($aresult[1])) {
                 $this->setPlatform(self::PLATFORM_WINDOWS_CE);
@@ -1093,7 +1091,6 @@ class Browser extends \Magento\Framework\App\Helper\AbstractHelper
         }
         return false;
     }
-
 
     /**
      * Determine if the browser is WebTv or not (last updated 1.7)

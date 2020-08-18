@@ -15,10 +15,6 @@ namespace KiwiCommerce\AdminActivity\Model;
 
 use KiwiCommerce\AdminActivity\Model\Activity\SystemConfig;
 
-/**
- * Class ActivityRepository
- * @package KiwiCommerce\AdminActivity\Model
- */
 class ActivityRepository implements \KiwiCommerce\AdminActivity\Api\ActivityRepositoryInterface
 {
     /**

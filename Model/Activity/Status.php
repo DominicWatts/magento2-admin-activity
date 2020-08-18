@@ -15,10 +15,6 @@ namespace KiwiCommerce\AdminActivity\Model\Activity;
 
 use \Magento\Framework\Model\AbstractModel;
 
-/**
- * Class Status
- * @package KiwiCommerce\AdminActivity\Model\Activity
- */
 class Status extends AbstractModel
 {
     /**

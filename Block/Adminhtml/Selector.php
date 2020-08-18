@@ -13,10 +13,6 @@
  */
 namespace KiwiCommerce\AdminActivity\Block\Adminhtml;
 
-/**
- * Class Selector
- * @package KiwiCommerce\AdminActivity\Block\Adminhtml
- */
 class Selector extends \Magento\Backend\Block\Template
 {
     /**

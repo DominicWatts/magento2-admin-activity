@@ -13,10 +13,6 @@
  */
 namespace KiwiCommerce\AdminActivity\Logger;
 
-/**
- * Class Handler
- * @package KiwiCommerce\AdminActivity\Logger
- */
 class Handler extends \Magento\Framework\Logger\Handler\Base
 {
     /**

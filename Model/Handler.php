@@ -17,10 +17,6 @@ use \KiwiCommerce\AdminActivity\Helper\TrackField as Helper;
 use \Magento\Framework\App\Request\Http;
 use \Magento\Framework\UrlInterface;
 
-/**
- * Class Handler
- * @package KiwiCommerce\AdminActivity\Model
- */
 class Handler
 {
     /**

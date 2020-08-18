@@ -13,6 +13,7 @@
  */
 namespace KiwiCommerce\AdminActivity\Test\Unit\Observer;
 
+// phpcs:disable Generic.Files.LineLength
 class SaveBeforeTest extends \PHPUnit\Framework\TestCase
 {
 

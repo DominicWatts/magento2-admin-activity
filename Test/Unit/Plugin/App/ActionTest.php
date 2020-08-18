@@ -13,10 +13,6 @@
  */
 namespace KiwiCommerce\AdminActivity\Test\Unit\Plugin\App;
 
-/**
- * Class ActionTest
- * @package KiwiCommerce\AdminActivity\Test\Unit\Plugin\App
- */
 class ActionTest extends \PHPUnit\Framework\TestCase
 {
 

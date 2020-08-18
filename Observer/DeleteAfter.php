@@ -17,10 +17,6 @@ use Magento\Framework\Event\ObserverInterface;
 use \KiwiCommerce\AdminActivity\Helper\Data as Helper;
 use \KiwiCommerce\AdminActivity\Api\ActivityRepositoryInterface;
 
-/**
- * Class DeleteAfter
- * @package KiwiCommerce\AdminActivity\Observer
- */
 class DeleteAfter implements ObserverInterface
 {
     /**

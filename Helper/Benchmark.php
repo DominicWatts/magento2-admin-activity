@@ -15,10 +15,6 @@ namespace KiwiCommerce\AdminActivity\Helper;
 
 use Magento\Framework\App\Helper\AbstractHelper;
 
-/**
- * Class Benchmark
- * @package KiwiCommerce\AdminActivity\Helper
- */
 class Benchmark extends AbstractHelper
 {
 

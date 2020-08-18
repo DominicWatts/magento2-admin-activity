@@ -13,10 +13,6 @@
  */
 namespace KiwiCommerce\AdminActivity\Test\Unit\Plugin\User;
 
-/**
- * Class DeleteTest
- * @package KiwiCommerce\AdminActivity\Test\Unit\Plugin
- */
 class DeleteTest extends \PHPUnit\Framework\TestCase
 {
     public $delete;

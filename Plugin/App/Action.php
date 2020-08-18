@@ -13,10 +13,6 @@
  */
 namespace KiwiCommerce\AdminActivity\Plugin\App;
 
-/**
- * Class Action
- * @package KiwiCommerce\AdminActivity\Plugin\App
- */
 class Action
 {
     /**

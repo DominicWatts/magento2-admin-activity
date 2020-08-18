@@ -13,10 +13,6 @@
  */
 namespace KiwiCommerce\AdminActivity\Model\Config;
 
-/**
- * Class Data
- * @package KiwiCommerce\AdminActivity\Model\Config
- */
 class Data extends \Magento\Framework\Config\Data
 {
 

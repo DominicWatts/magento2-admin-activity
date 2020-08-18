@@ -13,10 +13,6 @@
  */
 namespace KiwiCommerce\AdminActivity\Model;
 
-/**
- * Class LoginRepository
- * @package KiwiCommerce\AdminActivity\Model
- */
 class LoginRepository implements \KiwiCommerce\AdminActivity\Api\LoginRepositoryInterface
 {
     /**

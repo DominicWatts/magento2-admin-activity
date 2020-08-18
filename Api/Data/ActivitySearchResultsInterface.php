@@ -13,10 +13,6 @@
  */
 namespace KiwiCommerce\AdminActivity\Api\Data;
 
-/**
- * Interface LogSearchResultsInterface
- * @package KiwiCommerce\EnhancedSMTP\Api\Data
- */
 interface ActivitySearchResultsInterface extends \Magento\Framework\Api\SearchResultsInterface
 {
     /**

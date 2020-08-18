@@ -13,10 +13,6 @@
  */
 namespace KiwiCommerce\AdminActivity\Model\Activity;
 
-/**
- * Class SystemConfig
- * @package KiwiCommerce\AdminActivity\Model\Activity
- */
 class SystemConfig implements \KiwiCommerce\AdminActivity\Api\Activity\ModelInterface
 {
     /**

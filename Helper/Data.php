@@ -15,10 +15,6 @@ namespace KiwiCommerce\AdminActivity\Helper;
 
 use Magento\Framework\App\Config\ScopeConfigInterface;
 
-/**
- * Class Data
- * @package KiwiCommerce\AdminActivity\Helper
- */
 class Data extends \Magento\Framework\App\Helper\AbstractHelper
 {
     /**
@@ -235,7 +231,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      * @param $model
      * @return bool
      */
-    public static function isWildCardModel($model)
+    public static function isWildCardModel($model)  // phpcs:ignore 
     {
         $model = is_string($model)?$model:get_class($model);
         if (in_array($model, self::$wildcardModels)) {

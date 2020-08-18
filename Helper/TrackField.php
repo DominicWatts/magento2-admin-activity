@@ -13,10 +13,6 @@
  */
 namespace KiwiCommerce\AdminActivity\Helper;
 
-/**
- * Class Data
- * @package KiwiCommerce\AdminActivity\Helper
- */
 class TrackField extends \Magento\Framework\App\Helper\AbstractHelper
 {
     /**

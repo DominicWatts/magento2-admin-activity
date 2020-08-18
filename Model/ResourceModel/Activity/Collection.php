@@ -15,10 +15,6 @@ namespace KiwiCommerce\AdminActivity\Model\ResourceModel\Activity;
 
 use \Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection;
 
-/**
- * Class Collection
- * @package KiwiCommerce\AdminActivity\Model\ResourceModel\Activity
- */
 class Collection extends AbstractCollection
 {
     /**
@@ -28,8 +24,8 @@ class Collection extends AbstractCollection
     public function _construct()
     {
         $this->_init(
-            'KiwiCommerce\AdminActivity\Model\Activity',
-            'KiwiCommerce\AdminActivity\Model\ResourceModel\Activity'
+            KiwiCommerce\AdminActivity\Model\Activity::class,
+            KiwiCommerce\AdminActivity\Model\ResourceModel\Activity::class
         );
     }
 }

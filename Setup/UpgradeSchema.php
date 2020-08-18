@@ -17,10 +17,6 @@ use Magento\Framework\Setup\UpgradeSchemaInterface;
 use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\SchemaSetupInterface;
 
-/**
- * Class UpgradeSchema
- * @package KiwiCommerce\AdminActivity\Setup
- */
 class UpgradeSchema implements UpgradeSchemaInterface
 {
     /**

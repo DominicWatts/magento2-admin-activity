@@ -17,10 +17,6 @@ use Magento\Backend\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
 use Magento\Backend\App\Action;
 
-/**
- * Class Index
- * @package KiwiCommerce\AdminActivity\Controller\Adminhtml\Activity
- */
 class Index extends Action
 {
     /**

@@ -17,10 +17,6 @@ use Magento\Backend\Block\Template;
 use KiwiCommerce\AdminActivity\Api\ActivityRepositoryInterface;
 use KiwiCommerce\AdminActivity\Helper\Browser;
 
-/**
- * Class ActivityLogListing
- * @package KiwiCommerce\AdminActivity\Block\Adminhtml
- */
 class ActivityLogListing extends Template
 {
     /**

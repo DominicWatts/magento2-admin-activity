@@ -16,10 +16,6 @@ namespace KiwiCommerce\AdminActivity\Model;
 use KiwiCommerce\AdminActivity\Api\ActivityRepositoryInterface;
 use \KiwiCommerce\AdminActivity\Helper\Data as Helper;
 
-/**
- * Class Processor
- * @package KiwiCommerce\AdminActivity\Model
- */
 class Processor
 {
     /**
@@ -391,9 +387,10 @@ class Processor
 
     /**
      * Insert activity log data in database
+     * @todo Function's nesting level (6) exceeds 5; consider refactoring the function
      * @return bool
      */
-    public function saveLogs()
+    public function saveLogs() // phpcs:ignore 
     {
         try {
             if (!empty($this->activityLogs)) {

@@ -15,10 +15,6 @@ namespace KiwiCommerce\AdminActivity\Plugin;
 
 use \KiwiCommerce\AdminActivity\Helper\Data as Helper;
 
-/**
- * Class Auth
- * @package KiwiCommerce\AdminActivity\Plugin
- */
 class Auth
 {
     /**

@@ -16,10 +16,6 @@ namespace KiwiCommerce\AdminActivity\Observer;
 use Magento\Framework\Event\ObserverInterface;
 use \KiwiCommerce\AdminActivity\Helper\Data as Helper;
 
-/**
- * Class LoginFailed
- * @package KiwiCommerce\AdminActivity\Observer
- */
 class LoginFailed implements ObserverInterface
 {
     /**

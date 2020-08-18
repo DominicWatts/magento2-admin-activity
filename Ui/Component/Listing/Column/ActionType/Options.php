@@ -13,10 +13,6 @@
  */
 namespace KiwiCommerce\AdminActivity\Ui\Component\Listing\Column\ActionType;
 
-/**
- * Class Options
- * @package KiwiCommerce\AdminActivity\Ui\Component\Listing\Column\ActionType
- */
 class Options implements \Magento\Framework\Option\ArrayInterface
 {
     /**

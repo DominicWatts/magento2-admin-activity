@@ -13,10 +13,6 @@
  */
 namespace KiwiCommerce\AdminActivity\Test\Unit\Block\Adminhtml;
 
-/**
- * Class ActivityLogListingTest
- * @package KiwiCommerce\AdminActivity\Test\Unit\Block\Adminhtml
- */
 class ActivityLogListingTest extends \PHPUnit\Framework\TestCase
 {
     public $activityRepositoryMock;

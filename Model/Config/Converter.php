@@ -13,10 +13,8 @@
  */
 namespace KiwiCommerce\AdminActivity\Model\Config;
 
-/**
- * Class Converter
- * @package KiwiCommerce\AdminActivity\Model\Config
- */
+// phpcs:disable Generic.Files.LineLength
+
 class Converter implements \Magento\Framework\Config\ConverterInterface
 {
     /**

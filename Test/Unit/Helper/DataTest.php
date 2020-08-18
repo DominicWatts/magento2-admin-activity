@@ -13,10 +13,7 @@
  */
 namespace KiwiCommerce\AdminActivity\Test\Unit\Helper;
 
-/**
- * Class DataTest
- * @package KiwiCommerce\AdminActivity\Test\Unit\Helper
- */
+// phpcs:disable Generic.Files.LineLength
 class DataTest extends \PHPUnit\Framework\TestCase
 {
     /**

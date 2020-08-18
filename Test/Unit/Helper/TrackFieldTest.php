@@ -13,10 +13,6 @@
  */
 namespace KiwiCommerce\AdminActivity\Test\Unit\Helper;
 
-/**
- * Class TrackFieldTest
- * @package KiwiCommerce\AdminActivity\Test\Unit\Helper
- */
 class TrackFieldTest extends \PHPUnit\Framework\TestCase
 {
     public $helper;

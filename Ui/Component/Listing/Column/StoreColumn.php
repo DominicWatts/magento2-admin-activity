@@ -13,10 +13,6 @@
  */
 namespace KiwiCommerce\AdminActivity\Ui\Component\Listing\Column;
 
-/**
- * Class StoreColumn
- * @package KiwiCommerce\AdminActivity\Ui\Component\Listing\Column
- */
 class StoreColumn extends \Magento\Store\Ui\Component\Listing\Column\Store
 {
     /**

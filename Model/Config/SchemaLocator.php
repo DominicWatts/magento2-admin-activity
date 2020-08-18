@@ -16,10 +16,6 @@ namespace KiwiCommerce\AdminActivity\Model\Config;
 use Magento\Framework\Config\SchemaLocatorInterface;
 use Magento\Framework\Module\Dir;
 
-/**
- * Class SchemaLocator
- * @package KiwiCommerce\AdminActivity\Model\Config
- */
 class SchemaLocator implements SchemaLocatorInterface
 {
     /**

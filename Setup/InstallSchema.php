@@ -17,10 +17,6 @@ use Magento\Framework\Setup\InstallSchemaInterface;
 use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\SchemaSetupInterface;
 
-/**
- * Class InstallSchema
- * @package KiwiCommerce\AdminActivity\Setup
- */
 class InstallSchema implements InstallSchemaInterface
 {
     /**

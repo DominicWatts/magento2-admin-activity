@@ -15,10 +15,6 @@ namespace KiwiCommerce\AdminActivity\Model;
 
 use \Magento\Framework\Model\AbstractModel;
 
-/**
- * Class Login
- * @package KiwiCommerce\Activity\Model
- */
 class Login extends AbstractModel
 {
     /**
@@ -32,6 +28,6 @@ class Login extends AbstractModel
      */
     public function _construct()
     {
-        $this->_init('KiwiCommerce\AdminActivity\Model\ResourceModel\Login');
+        $this->_init(KiwiCommerce\AdminActivity\Model\ResourceModel\Login::class);
     }
 }

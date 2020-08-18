@@ -13,10 +13,6 @@
  */
 namespace KiwiCommerce\AdminActivity\Api\Data;
 
-/**
- * Interface ActivityInterface
- * @package KiwiCommerce\AdminActivity\Api\Data
- */
 interface ActivityInterface
 {
 

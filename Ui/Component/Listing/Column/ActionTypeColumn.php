@@ -18,10 +18,6 @@ use Magento\Framework\View\Element\UiComponent\ContextInterface;
 use Magento\Ui\Component\Listing\Columns\Column;
 use \KiwiCommerce\AdminActivity\Helper\Data as Helper;
 
-/**
- * Class ActionTypeColumn
- * @package KiwiCommerce\AdminActivity\Ui\Component\Listing\Column
- */
 class ActionTypeColumn extends Column
 {
     /**

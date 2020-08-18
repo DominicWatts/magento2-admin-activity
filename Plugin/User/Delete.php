@@ -13,10 +13,6 @@
  */
 namespace KiwiCommerce\AdminActivity\Plugin\User;
 
-/**
- * Class Delete
- * @package KiwiCommerce\AdminActivity\Plugin\User
- */
 class Delete
 {
     /**
