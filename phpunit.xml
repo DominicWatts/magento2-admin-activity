@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         backupGlobals="false"
+         backupStaticAttributes="false" 
+         bootstrap="vendor/autoload.php" 
+         colors="true" 
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false" 
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd">
+    <testsuites>
+        <testsuite name="Block Tests">
+            <directory suffix="Test.php">./Test/Unit/Block</directory>
+        </testsuite>
+        <testsuite name="Helper Tests">
+            <directory suffix="Test.php">./Test/Unit/Category</directory>
+        </testsuite>
+        <testsuite name="Model Tests">
+            <directory suffix="Test.php">./Test/Unit/Commission</directory>
+        </testsuite>
+        <testsuite name="Observer Tests">
+            <directory suffix="Test.php">./Test/Unit/Condition</directory>
+        </testsuite>
+        <testsuite name="Plugin Tests">
+            <directory suffix="Test.php">./Test/Unit/Order</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <env name="APP_ENV" value="testing"/>
+        <env name="CACHE_DRIVER" value="array"/>
+        <env name="SESSION_DRIVER" value="array"/>
+        <env name="QUEUE_DRIVER" value="sync"/>
+    </php>
+</phpunit>
