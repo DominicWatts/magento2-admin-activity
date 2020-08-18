@@ -7,14 +7,13 @@
  * Please contact us https://kiwicommerce.co.uk/contacts.
  *
  * @category   KiwiCommerce
- * @package    KiwiCommerce_AdminActivity
  * @copyright  Copyright (C) 2018 Kiwi Commerce Ltd (https://kiwicommerce.co.uk/)
  * @license    https://kiwicommerce.co.uk/magento2-extension-license/
  */
 namespace KiwiCommerce\AdminActivity\Observer;
 
+use KiwiCommerce\AdminActivity\Helper\Data as Helper;
 use Magento\Framework\Event\ObserverInterface;
-use \KiwiCommerce\AdminActivity\Helper\Data as Helper;
 
 class LoginSuccess implements ObserverInterface
 {
@@ -48,7 +47,7 @@ class LoginSuccess implements ObserverInterface
         $this->loginRepository = $loginRepository;
         $this->benchmark = $benchmark;
     }
-    
+
     /**
      * Login success
      * @param \Magento\Framework\Event\Observer $observer
@@ -60,7 +59,7 @@ class LoginSuccess implements ObserverInterface
         if (!$this->helper->isLoginEnable()) {
             return $observer;
         }
-        
+
         $this->loginRepository
             ->setUser($observer->getUser())
             ->addSuccessLog();

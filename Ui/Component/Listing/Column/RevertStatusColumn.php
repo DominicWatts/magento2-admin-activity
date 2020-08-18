@@ -7,7 +7,6 @@
  * Please contact us https://kiwicommerce.co.uk/contacts.
  *
  * @category   KiwiCommerce
- * @package    KiwiCommerce_AdminActivity
  * @copyright  Copyright (C) 2018 Kiwi Commerce Ltd (https://kiwicommerce.co.uk/)
  * @license    https://kiwicommerce.co.uk/magento2-extension-license/
  */
@@ -32,8 +31,8 @@ class RevertStatusColumn extends Column
                 } elseif ($item['is_revertable']==
                     \KiwiCommerce\AdminActivity\Model\Activity\Status::ACTIVITY_REVERT_SUCCESS) {
                     $item[$this->getData('name')] =
-                        '<span class="grid-severity-notice" title=""><span>Success</span></span>'.
-                        '<br/><strong>Reverted By:</strong> '.$item['revert_by'];
+                        '<span class="grid-severity-notice" title=""><span>Success</span></span>' .
+                        '<br/><strong>Reverted By:</strong> ' . $item['revert_by'];
                 } elseif ($item['is_revertable']==\KiwiCommerce\AdminActivity\Model\Activity\Status::ACTIVITY_FAIL) {
                     $item[$this->getData('name')] =
                         '<span class="grid-severity-critical" title=""><span>Faild</span></span>';

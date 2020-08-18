@@ -7,7 +7,6 @@
  * Please contact us https://kiwicommerce.co.uk/contacts.
  *
  * @category   KiwiCommerce
- * @package    KiwiCommerce_AdminActivity
  * @copyright  Copyright (C) 2018 Kiwi Commerce Ltd (https://kiwicommerce.co.uk/)
  * @license    https://kiwicommerce.co.uk/magento2-extension-license/
  */
@@ -82,7 +81,7 @@ class ThemeConfig implements \KiwiCommerce\AdminActivity\Api\Activity\ModelInter
     {
         $path = $this->getPath($model);
         $systemData = $this->valueFactory->create()->getCollection()
-                            ->addFieldToFilter('path', ['like'=> $path.'/%']);
+                            ->addFieldToFilter('path', ['like'=> $path . '/%']);
 
         $data = [];
         foreach ($systemData->getData() as $config) {
@@ -99,7 +98,7 @@ class ThemeConfig implements \KiwiCommerce\AdminActivity\Api\Activity\ModelInter
      */
     public function getEditData($model, $fieldArray)
     {
-        $path = 'stores/scope_id/'.$model->getScopeId();
+        $path = 'stores/scope_id/' . $model->getScopeId();
         $oldData = $this->getOldData($model);
         $newData = $this->request->getPostValue();
         $result = $this->collectAdditionalData($oldData, $newData, $fieldArray);
@@ -146,7 +145,7 @@ class ThemeConfig implements \KiwiCommerce\AdminActivity\Api\Activity\ModelInter
             $oldValue = !empty($oldData[$key]) ? $oldData[$key] : '';
 
             if ($newValue != $oldValue) {
-                $key = 'design/'.preg_replace('/_/', '/', $key, 1);
+                $key = 'design/' . preg_replace('/_/', '/', $key, 1);
                 $logData[$key] = [
                     'old_value' => $oldValue,
                     'new_value'=> $newValue

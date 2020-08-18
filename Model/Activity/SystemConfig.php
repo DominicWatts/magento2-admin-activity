@@ -7,7 +7,6 @@
  * Please contact us https://kiwicommerce.co.uk/contacts.
  *
  * @category   KiwiCommerce
- * @package    KiwiCommerce_AdminActivity
  * @copyright  Copyright (C) 2018 Kiwi Commerce Ltd (https://kiwicommerce.co.uk/)
  * @license    https://kiwicommerce.co.uk/magento2-extension-license/
  */
@@ -73,7 +72,7 @@ class SystemConfig implements \KiwiCommerce\AdminActivity\Api\Activity\ModelInte
     public function getOldData($model)
     {
         $path = $this->getPath($model);
-        $systemData = $this->valueFactory->create()->getCollection()->addFieldToFilter('path', ['like'=> $path.'/%']);
+        $systemData = $this->valueFactory->create()->getCollection()->addFieldToFilter('path', ['like'=> $path . '/%']);
         $data = [];
         foreach ($systemData->getData() as $config) {
             $splittedPath = explode('/', $config['path']);

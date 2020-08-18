@@ -7,16 +7,15 @@
  * Please contact us https://kiwicommerce.co.uk/contacts.
  *
  * @category   KiwiCommerce
- * @package    KiwiCommerce_AdminActivity
  * @copyright  Copyright (C) 2018 Kiwi Commerce Ltd (https://kiwicommerce.co.uk/)
  * @license    https://kiwicommerce.co.uk/magento2-extension-license/
  */
 namespace KiwiCommerce\AdminActivity\Ui\Component\Listing\Column;
 
-use Magento\Framework\View\Element\UiComponentFactory;
+use KiwiCommerce\AdminActivity\Helper\Data as Helper;
 use Magento\Framework\View\Element\UiComponent\ContextInterface;
+use Magento\Framework\View\Element\UiComponentFactory;
 use Magento\Ui\Component\Listing\Columns\Column;
-use \KiwiCommerce\AdminActivity\Helper\Data as Helper;
 
 class ActionTypeColumn extends Column
 {

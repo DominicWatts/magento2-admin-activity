@@ -7,13 +7,12 @@
  * Please contact us https://kiwicommerce.co.uk/contacts.
  *
  * @category   KiwiCommerce
- * @package    KiwiCommerce_AdminActivity
  * @copyright  Copyright (C) 2018 Kiwi Commerce Ltd (https://kiwicommerce.co.uk/)
  * @license    https://kiwicommerce.co.uk/magento2-extension-license/
  */
 namespace KiwiCommerce\AdminActivity\Model\Activity;
 
-use \Magento\Framework\Model\AbstractModel;
+use Magento\Framework\Model\AbstractModel;
 
 class Status extends AbstractModel
 {

@@ -7,7 +7,6 @@
  * Please contact us https://kiwicommerce.co.uk/contacts.
  *
  * @category   KiwiCommerce
- * @package    KiwiCommerce_AdminActivity
  * @copyright  Copyright (C) 2018 Kiwi Commerce Ltd (https://kiwicommerce.co.uk/)
  * @license    https://kiwicommerce.co.uk/magento2-extension-license/
  */
@@ -47,7 +46,7 @@ interface ActivityRepositoryInterface
      * @return mixed
      */
     public function getActivityDetail($activityId);
-    
+
     /**
      * Get all admin activity log by activity id
      * @param $activityId

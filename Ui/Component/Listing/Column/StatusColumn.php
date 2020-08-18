@@ -7,7 +7,6 @@
  * Please contact us https://kiwicommerce.co.uk/contacts.
  *
  * @category   KiwiCommerce
- * @package    KiwiCommerce_AdminActivity
  * @copyright  Copyright (C) 2018 Kiwi Commerce Ltd (https://kiwicommerce.co.uk/)
  * @license    https://kiwicommerce.co.uk/magento2-extension-license/
  */
@@ -32,7 +31,7 @@ class StatusColumn extends Column
                 } else {
                     $remark = $item['remarks'];
                     $item[$this->getData('name')] =
-                        '<span class="grid-severity-critical" title="'.$remark.'"><span>Faild</span></span>';
+                        '<span class="grid-severity-critical" title="' . $remark . '"><span>Faild</span></span>';
                 }
             }
         }

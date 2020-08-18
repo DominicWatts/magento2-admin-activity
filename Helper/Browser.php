@@ -7,7 +7,6 @@
  * Please contact us https://kiwicommerce.co.uk/contacts.
  *
  * @category   KiwiCommerce
- * @package    KiwiCommerce_AdminActivity
  * @copyright  Copyright (C) 2018 Kiwi Commerce Ltd (https://kiwicommerce.co.uk/)
  * @license    https://kiwicommerce.co.uk/magento2-extension-license/
  */
@@ -185,7 +184,7 @@ class Browser extends \Magento\Framework\App\Helper\AbstractHelper
      */
     public function reset()
     {
-        $this->_agent = isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : "";  // phpcs:ignore 
+        $this->_agent = isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : "";  // phpcs:ignore
         $this->_browser_name = self::BROWSER_UNKNOWN;
         $this->_version = self::VERSION_UNKNOWN;
         $this->_platform = self::PLATFORM_UNKNOWN;
@@ -416,7 +415,7 @@ class Browser extends \Magento\Framework\App\Helper\AbstractHelper
      */
     public function __toString()
     {
-        $device = ($this->isMobile())?'Mobile':(($this->isTablet())?'Tablet':'Desktop');
+        $device = ($this->isMobile()) ? 'Mobile' : (($this->isTablet()) ? 'Tablet' : 'Desktop');
         return "<strong>Browser Name:</strong> {$this->getBrowser()}<br/>\n" .
             "<strong>Browser Version:</strong> {$this->getVersion()}<br/>\n" .
             "<strong>Platform:</strong> {$this->getPlatform()}<br/>\n" .
@@ -1412,7 +1411,6 @@ class Browser extends \Magento\Framework\App\Helper\AbstractHelper
             && stripos($this->_agent, 'iPhone') === false
             && stripos($this->_agent, 'iPod') === false
         ) {
-
             $aresult = explode('/', stristr($this->_agent, 'Version'));
             if (isset($aresult[1])) {
                 $aversion = explode(' ', $aresult[1]);
@@ -1433,7 +1431,6 @@ class Browser extends \Magento\Framework\App\Helper\AbstractHelper
     protected function checkBrowserSamsung()
     {
         if (stripos($this->_agent, 'SamsungBrowser') !== false) {
-
             $aresult = explode('/', stristr($this->_agent, 'SamsungBrowser'));
             if (isset($aresult[1])) {
                 $aversion = explode(' ', $aresult[1]);
@@ -1579,7 +1576,6 @@ class Browser extends \Magento\Framework\App\Helper\AbstractHelper
             $this->checkForFacebookIos();
             $this->setMobile(true);
             return true;
-
         }
         return false;
     }
@@ -1733,7 +1729,7 @@ class Browser extends \Magento\Framework\App\Helper\AbstractHelper
         } elseif (stripos($this->_agent, 'Silk') !== false) {
             $this->_platform = self::PLATFORM_FIRE_OS;
         } elseif (stripos($this->_agent, 'linux') !== false && stripos($this->_agent, 'SMART-TV') !== false) {
-            $this->_platform = self::PLATFORM_LINUX .'/'.self::PLATFORM_SMART_TV;
+            $this->_platform = self::PLATFORM_LINUX . '/' . self::PLATFORM_SMART_TV;
         } elseif (stripos($this->_agent, 'linux') !== false) {
             $this->_platform = self::PLATFORM_LINUX;
         } elseif (stripos($this->_agent, 'Nokia') !== false) {

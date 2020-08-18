@@ -7,7 +7,6 @@
  * Please contact us https://kiwicommerce.co.uk/contacts.
  *
  * @category   KiwiCommerce
- * @package    KiwiCommerce_AdminActivity
  * @copyright  Copyright (C) 2018 Kiwi Commerce Ltd (https://kiwicommerce.co.uk/)
  * @license    https://kiwicommerce.co.uk/magento2-extension-license/
  */
@@ -61,8 +60,8 @@ class Benchmark extends AbstractHelper
         $this->reset($method);
         if (self::BENCHMARK_ENABLE) {
             $this->startTime[$method] = round(microtime(true) * 1000);
-            $this->logger->info("Method: ". $method);
-            $this->logger->info("Start time: ". $this->startTime[$method]);
+            $this->logger->info("Method: " . $method);
+            $this->logger->info("Start time: " . $this->startTime[$method]);
             \Magento\Framework\Profiler::start($method);
         }
     }
@@ -78,9 +77,9 @@ class Benchmark extends AbstractHelper
             $this->endTime[$method] = round(microtime(true) * 1000);
             $difference = $this->endTime[$method] - $this->startTime[$method];
             if ($difference) {
-                $this->logger->info("Method: ". $method);
-                $this->logger->info("Ends time: ". $this->endTime[$method]);
-                $this->logger->info("Time difference in millisecond: ". $difference);
+                $this->logger->info("Method: " . $method);
+                $this->logger->info("Ends time: " . $this->endTime[$method]);
+                $this->logger->info("Time difference in millisecond: " . $difference);
             }
             \Magento\Framework\Profiler::stop($method);
         }

@@ -7,15 +7,14 @@
  * Please contact us https://kiwicommerce.co.uk/contacts.
  *
  * @category   KiwiCommerce
- * @package    KiwiCommerce_AdminActivity
  * @copyright  Copyright (C) 2018 Kiwi Commerce Ltd (https://kiwicommerce.co.uk/)
  * @license    https://kiwicommerce.co.uk/magento2-extension-license/
  */
 
 namespace KiwiCommerce\AdminActivity\Block\Adminhtml\System\Config\Fieldset;
 
-use \Magento\Backend\Block\Template;
-use \Magento\Framework\Data\Form\Element\Renderer\RendererInterface;
+use Magento\Backend\Block\Template;
+use Magento\Framework\Data\Form\Element\Renderer\RendererInterface;
 
 class Hint extends Template implements RendererInterface
 {

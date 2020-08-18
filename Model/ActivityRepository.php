@@ -7,7 +7,6 @@
  * Please contact us https://kiwicommerce.co.uk/contacts.
  *
  * @category   KiwiCommerce
- * @package    KiwiCommerce_AdminActivity
  * @copyright  Copyright (C) 2018 Kiwi Commerce Ltd (https://kiwicommerce.co.uk/)
  * @license    https://kiwicommerce.co.uk/magento2-extension-license/
  */
@@ -156,7 +155,7 @@ class ActivityRepository implements \KiwiCommerce\AdminActivity\Api\ActivityRepo
             ->load($activityId, 'activity_id');
         return $data;
     }
-    
+
     /**
      * Get all admin activity log by activity id
      * @param $activityId
@@ -216,9 +215,9 @@ class ActivityRepository implements \KiwiCommerce\AdminActivity\Api\ActivityRepo
                     continue;
                 }
                 if ($log->getFieldName()==self::QTY_FIELD) {
-                    $model-> setStockData(['qty' => $log->getOldValue()]);
+                    $model->setStockData(['qty' => $log->getOldValue()]);
                 }
-                $method = 'set'.$this->getMethodName($log->getFieldName());
+                $method = 'set' . $this->getMethodName($log->getFieldName());
                 $model->{$method}($log->getOldValue());
             }
 

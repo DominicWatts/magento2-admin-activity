@@ -7,7 +7,6 @@
  * Please contact us https://kiwicommerce.co.uk/contacts.
  *
  * @category   KiwiCommerce
- * @package    KiwiCommerce_AdminActivity
  * @copyright  Copyright (C) 2018 Kiwi Commerce Ltd (https://kiwicommerce.co.uk/)
  * @license    https://kiwicommerce.co.uk/magento2-extension-license/
  */
@@ -50,7 +49,7 @@ class BrowserColumn extends Column
     {
         $this->browser->reset();
         $this->browser->setUserAgent($item['user_agent']);
-        return $this->browser->getBrowser().' '.$this->browser->getVersion();
+        return $this->browser->getBrowser() . ' ' . $this->browser->getVersion();
     }
 
     /**

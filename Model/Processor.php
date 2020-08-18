@@ -7,14 +7,13 @@
  * Please contact us https://kiwicommerce.co.uk/contacts.
  *
  * @category   KiwiCommerce
- * @package    KiwiCommerce_AdminActivity
  * @copyright  Copyright (C) 2018 Kiwi Commerce Ltd (https://kiwicommerce.co.uk/)
  * @license    https://kiwicommerce.co.uk/magento2-extension-license/
  */
 namespace KiwiCommerce\AdminActivity\Model;
 
 use KiwiCommerce\AdminActivity\Api\ActivityRepositoryInterface;
-use \KiwiCommerce\AdminActivity\Helper\Data as Helper;
+use KiwiCommerce\AdminActivity\Helper\Data as Helper;
 
 class Processor
 {
@@ -390,7 +389,7 @@ class Processor
      * @todo Function's nesting level (6) exceeds 5; consider refactoring the function
      * @return bool
      */
-    public function saveLogs() // phpcs:ignore 
+    public function saveLogs() // phpcs:ignore
     {
         try {
             if (!empty($this->activityLogs)) {
@@ -622,7 +621,6 @@ class Processor
 
         if ($this->helper->isPageVisitEnable()
             && $this->isValidAction($module, $this->lastAction)) {
-
             $activity = $this->_initLog();
 
             $activity->setActionType('view');
